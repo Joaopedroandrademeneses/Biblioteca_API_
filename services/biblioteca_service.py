@@ -10,11 +10,12 @@ def listar_leitores():
     return list(db.leitores.values())
 def criar_livro(data):
     livro = Livro(
-        codigo=data.codigo,
-        titulo=data.titulo,
-        preco=data.preco,
-        desconto_percentual=data.desconto_percentual
-    )
+    codigo=data.codigo,
+    titulo=data.titulo,
+    preco=data.preco,
+    tipo=data.tipo,
+    desconto_percentual=data.desconto_percentual
+)
     db.livros[livro.codigo] = livro
     return livro
 
